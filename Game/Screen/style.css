@@ -1,0 +1,118 @@
+#store {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    border: 10px;
+    padding-left: 20px;
+}
+
+.inset {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 3px 3px #ccc;
+    padding: 5px;
+}
+
+#sectionLeft, #sectionMiddle, #sectionRight {
+    
+    width: 32%;
+    height: 98vh;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+#gold-chest {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+
+#gold-coins {
+    height: 100%;
+    max-width: 200px;
+    max-height: 350px;
+    position: absolute;
+    bottom: 0;  
+    overflow: hidden;
+
+     
+}
+
+.imagem-de-fundo {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    
+}
+
+.info {
+    text-align: center;
+    padding: 5px;
+}
+
+#nickNameTool {
+    font-size: xx-large;
+    box-shadow: 1px 13px 5px 0px #00000038;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+#cash {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 50px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#gold {
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+.assetsalign {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+#assetstext, #assetscurrently {
+    font-size:18px;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.allassets {
+    text-transform: uppercase;   
+}
+
+.asset {
+    border-top: 10px;
+    border: 10px;
+    text-align: center;
+    font-size: 22px;
+    box-shadow: 2px 6px 4px 0px #00000033;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#assetscr {
+    margin: 0px;
+    padding-left: 15px;
+}
+
+.assetsqtd {
+    margin: 0px;
+    font-size: 40px;
+    padding-left: 120%;
+}
+
+.assetscr {
+    margin-top: 0px;
+}
+
+
