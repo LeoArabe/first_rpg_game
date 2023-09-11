@@ -1,6 +1,7 @@
 
 addEventListener('mouseover',() => {
     document.querySelector('.allassets').style.cursor = 'pointer';
+    document.querySelector('.allupassets').style.cursor = 'pointer';
   });
 
 export class Investment {

@@ -66,7 +66,7 @@ export default class Store {
         this.assetElement.innerText = proftPSecond < 10 ? proftPSecond.toFixed(1) : Math.round(proftPSecond);
        
         this.assetElements.forEach((asset, index) => {
-            console.log(asset.costElement)
+            
             asset.costElement.innerText = `custo: ${assets[index].invest.price}`;
             asset.profitElement.innerText = `rende: ${assets[index].invest.proftPSecond}`;
         });

@@ -86,7 +86,7 @@
     vertical-align: top;
 }
 
-.allassets {
+.allassets, .allupassets {
     text-transform: uppercase;   
 }
 
@@ -113,6 +113,13 @@
 
 .assetscr {
     margin-top: 0px;
+}
+
+#upgrades {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 40px;
+    border: 20px;
+    padding: 10px;
 }
 
 

@@ -1,23 +1,11 @@
-import { Investment } from "./assets.js";
 import Portfolio from "./portfolio.js";
 import Store from "./store.js";
+import Upgrades from "./upgrades.js";
 
 const portfolioPlayer = new Portfolio();
 const store = new Store(portfolioPlayer);
-/*
-class ObserverAnonimus {
-    constructor(portfolioPlayer){
-        portfolioPlayer.addObserver(this);
-    }
+const upgrade = new Upgrades(portfolioPlayer);
 
-    update(cash, proftPSecond,investiments){
-        console.dir(investiments); 
-
-    } 
-}
-
-const observadorAnonimo = new ObserverAnonimus(portfolioPlayer);
-*/
 setInterval(() => {
     portfolioPlayer.updateProftPSecond();
     portfolioPlayer.cash += portfolioPlayer.proftPSecond;
