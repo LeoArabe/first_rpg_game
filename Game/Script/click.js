@@ -1,5 +1,6 @@
 import portfolioPlayer from "./app.js";
 
+let clickValue = 1;
 let goldChest = document.querySelector('#gold-chest');
 
 goldChest.addEventListener('mouseover',() => {
@@ -7,8 +8,9 @@ goldChest.addEventListener('mouseover',() => {
   });
 
 goldChest.addEventListener('click', () => {
-    portfolioPlayer.clickChest();
-    console.log(`Saldo atualizado: ${Math.round(portfolioPlayer.cash)}`)
-    //portfolioPlayer.notfyObservers();
+  if(portfolioPlayer.proftPSecond > 100){
+    clickValue = portfolioPlayer.proftPSecond/100
+  }
+  portfolioPlayer.clickChest(clickValue);
 });
 

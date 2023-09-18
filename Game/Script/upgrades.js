@@ -1,14 +1,14 @@
 import portfolioPlayer from "./app.js";
-import { Investment } from "./assets.js";
 import Upgrade from "./upassets.js"; 
+import { assets } from "./store.js";
 
 const upgradesData = [
-    { id: 'cursorup', price: 50, proftMultplier: 2, associatedAssetId: 'cursor' },
-    { id: 'minerup', price: 250, proftMultplier: 2, associatedAssetId: 'miner' },
-    { id: 'miningup', price: 3000, proftMultplier: 2, associatedAssetId: 'mining' },
-    { id: 'farmup', price: 35000, proftMultplier: 2, associatedAssetId: 'farm' },
-    { id: 'bankup', price: 50000, proftMultplier: 2, associatedAssetId: 'bank' },
-    { id: 'islandup', price: 350000, proftMultplier: 2, associatedAssetId: 'island' },
+    { id: 'cursorup', price: 50, proftMultplier: 2, associatedAssetId: 'cursorasset' },
+    { id: 'minerup', price: 250, proftMultplier: 2, associatedAssetId: 'minerasset' },
+    { id: 'miningup', price: 3000, proftMultplier: 2, associatedAssetId: 'miningasset' },
+    { id: 'farmup', price: 35000, proftMultplier: 2, associatedAssetId: 'farmasset' },
+    { id: 'bankup', price: 50000, proftMultplier: 2, associatedAssetId: 'bankasset' },
+    { id: 'islandup', price: 350000, proftMultplier: 2, associatedAssetId: 'islandasset' },
 ];
 
 const upElements = {};
@@ -22,8 +22,8 @@ for (const up of upgradesData) {
 const upgrades = upgradesData.map(up => ({
     element: upElements[up.id],
     quantityElement: upQuantities[up.id],
-    upgrade: new Upgrade(upElements[up.id], up.price, up.proftMultplier),
     associatedAssetId: up.associatedAssetId,
+    upgrade: new Upgrade(upElements[up.id], up.price, up.proftMultplier),
 }));
 
 upgrades.forEach(up => {
@@ -32,18 +32,16 @@ upgrades.forEach(up => {
     }
 
     up.element.addEventListener('click', () => {
+        
+        
         if (portfolioPlayer.cash >= up.upgrade.price) {
 
-
-
-            const associatedAsset = assets.find(asset => asset.id === up.associatedAssetId);
+            const associatedAsset = assets.find(asset => asset.element.id === up.associatedAssetId); 
 
             if (associatedAsset) {
-                
-                const newProftPSecond = portfolioPlayer.proftPSecond * associatedAsset.invest.proftMultiplier;
-             
-                portfolioPlayer.proftPSecond = newProftPSecond;
-
+                associatedAsset.invest.upProftValue(associatedAsset.invest.proftPSecond*2);
+                console.log(portfolioPlayer.proftPSecond)
+                console.log(portfolioPlayer.investiments)
 
                 portfolioPlayer.buyUpgrade(up.upgrade);
                 up.quantityElement.innerText = ++up.quantityElement.innerText || 1;
@@ -71,7 +69,7 @@ export default class Upgrades {
         this.upElement.innerText = proftMultplier < 10 ? proftMultplier.toFixed(1) : Math.round(proftMultplier);
 
         this.upgradeElements.forEach((up, index) => {
-            up.costElement.innerText = `custo: ${upgradesData[index].price}`;
+            up.costElement.innerText = `custo: ${upgrades[index].upgrade.price}`;
             up.profitElement.innerText = `upgrade: ${upgradesData[index].proftMultplier}`;
         });
     }

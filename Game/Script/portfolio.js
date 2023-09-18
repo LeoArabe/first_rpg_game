@@ -33,17 +33,12 @@ export default class Portfolio {
   buyUpgrade(upgrade) {
     if (this.cash >= upgrade.price) {
         this.cash -= upgrade.price;
-        
-        // Atualiza o proftPSecond multiplicando pelo proftMultiplier da atualização
-        this.proftPSecond *= upgrade.proftMultiplier;
-        
-        // Notifica os observadores (caso você tenha implementado essa funcionalidade)
+        this.updateProftPSecond();
         this.notfyObservers();
     } else {
         console.log("Saldo insuficiente");
     }
 }
-
 
   buyInvest(investiment) {
   
@@ -57,8 +52,8 @@ export default class Portfolio {
     }
   }
 
-  clickChest() {
-    this.cash += 10;
+  clickChest(clickValue) {
+    this.cash += clickValue;
     this.notfyObservers();
   } 
 }

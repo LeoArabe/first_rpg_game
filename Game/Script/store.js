@@ -3,8 +3,8 @@ import { Investment } from "./assets.js";
 
 const assetsData = [
     { id: 'cursor', price: 15, proftPSecond: 0.1 },
-    { id: 'miner', price: 100, proftPSecond: 1 },
-    { id: 'mining', price: 1100, proftPSecond: 8 },
+    { id: 'miner', price: 100, proftPSecond: 10 },
+    { id: 'mining', price: 1100, proftPSecond: 80 },
     { id: 'farm', price: 12000, proftPSecond: 47 },
     { id: 'bank', price: 130000, proftPSecond: 200 },
     { id: 'island', price: 2000000, proftPSecond: 1000 },
@@ -72,3 +72,5 @@ export default class Store {
         });
     }
 }
+
+export { assets };

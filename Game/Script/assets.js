@@ -14,4 +14,8 @@ export class Investment {
     inflatePrice(newValue) {
         this.price = newValue;
     }
+
+    upProftValue(newProfit) {
+        this.proftPSecond = newProfit;
+    }
 }
