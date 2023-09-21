@@ -1,5 +1,5 @@
 import { assetsData } from "./assetsdata.js"
-import assets from "./storeNup.js"
+import assets from "./assetclickhandlers.js"
 
 export default class AssetManager {
     constructor(portfolioPlayer){
