@@ -1,4 +1,4 @@
-export class Investment {
+export default class Investment {
     constructor(name, price, priceUp, proftPSecond, proftMultiplier) {
         this.name = name;
         this.price = price;

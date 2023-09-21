@@ -1,4 +1,4 @@
-export function handleNickname() {
+export default function handleNickname() {
     let playerNickName = '';
     const nickName = document.querySelector("#nickNameTool");
     

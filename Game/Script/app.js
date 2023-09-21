@@ -1,9 +1,9 @@
 import Portfolio from "./portfolio.js";
-import StoreNup from "./storeNup.js";
-import { handleNickname } from "./nickname.js";
+import handleNickname from "./nickname.js";
+import AssetManager from "./assetmanager.js";
 
 const portfolioPlayer = new Portfolio();
-const storeNup = new StoreNup(portfolioPlayer);
+const assetManager = new AssetManager(portfolioPlayer);
 
 const updatePortfolio = () => {
   portfolioPlayer.updateProftPSecond();
