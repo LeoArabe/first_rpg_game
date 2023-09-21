@@ -1,4 +1,5 @@
 import Investment from "./investment.js"; 
+
 const assetsData = [
     { id: 'cursor', price: 15, priceUp: 50, proftPSecond: 0.1, proftMultplier: 2 },
     { id: 'miner', price: 100, priceUp: 250, proftPSecond: 1, proftMultplier: 1.8 },

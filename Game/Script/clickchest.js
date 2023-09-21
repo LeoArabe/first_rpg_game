@@ -1,4 +1,4 @@
-import setupCursorPointer from './cursor.js';
+import setupCursorPointer from './settercursor.js';
 import portfolioPlayer from './app.js';
 
 export function handleGoldChest() {

@@ -1,5 +1,5 @@
 import Portfolio from "./portfolio.js";
-import handleNickname from "./nickname.js";
+import handleNickname from "./setternickname.js";
 import AssetManager from "./assetmanager.js";
 
 const portfolioPlayer = new Portfolio();
