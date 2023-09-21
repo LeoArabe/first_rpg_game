@@ -1,5 +1,5 @@
 import portfolioPlayer from "./app.js";
-import createElements from "./elementassets.js";
+import createElements from "./assetelements.js";
 import { createAssets } from "./assetsdata.js"
 
 const clickBuyNewAsset = (asset) => {
