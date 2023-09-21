@@ -1,16 +1,25 @@
-import portfolioPlayer from "./app.js";
+import { setupCursorPointers } from './cursor';
+import { clickChest } from './app';
 
-let clickValue = 1;
-let goldChest = document.querySelector('#gold-chest');
+export function hadleGoldChest() {
+  let clickValue = 1;
+  const goldChest = document.querySelector('#gold-chest');
 
-goldChest.addEventListener('mouseover',() => {
-    document.querySelector('#gold-chest').style.cursor = 'pointer';
+  setupCursorPointers();
+
+  goldChest.addEventListener('mouseover', () => {
+    goldChest.style.cursor = 'pointer';
   });
 
-goldChest.addEventListener('click', () => {
-  if(portfolioPlayer.proftPSecond > 100){
-    clickValue = portfolioPlayer.proftPSecond/100
-  }
-  portfolioPlayer.clickChest(clickValue);
-});
+  goldChest.addEventListener('click', () => {
+    if(clickChest.proftPSecond > 100) {
+      clickValue = clickChest.proftPSecond / 100;
+    }
+    clickChest(clickValue);
+  });
+}
+
+
+
+
 

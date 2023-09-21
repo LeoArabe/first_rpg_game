@@ -1,18 +1,18 @@
-
-addEventListener('mouseover',() => {
-    document.querySelector('.allassets').style.cursor = 'pointer';
-    document.querySelector('.allupassets').style.cursor = 'pointer';
-  });
-
 export class Investment {
-    constructor(name, price, proftPSecond) {
+    constructor(name, price, priceUp, proftPSecond, proftMultiplier) {
         this.name = name;
         this.price = price;
+        this.priceUp = priceUp;
         this.proftPSecond = proftPSecond;
+        this.proftMultiplier = proftMultiplier;
     }
 
     inflatePrice(newValue) {
         this.price = newValue;
+    }
+
+    inflateUpPrice(newValue) {
+        this.priceUp = newValue;
     }
 
     upProftValue(newProfit) {
