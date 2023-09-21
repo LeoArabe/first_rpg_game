@@ -1,25 +1,26 @@
-import { setupCursorPointers } from './cursor';
-import { clickChest } from './app';
+import { setupCursorPointer } from './cursor.js';
+import portfolioPlayer from './app.js';
 
-export function hadleGoldChest() {
+export function handleGoldChest() {
   let clickValue = 1;
   const goldChest = document.querySelector('#gold-chest');
 
-  setupCursorPointers();
+  setupCursorPointer();
 
   goldChest.addEventListener('mouseover', () => {
     goldChest.style.cursor = 'pointer';
   });
 
   goldChest.addEventListener('click', () => {
-    if(clickChest.proftPSecond > 100) {
-      clickValue = clickChest.proftPSecond / 100;
+    if (portfolioPlayer.proftPSecond > 100) {
+      clickValue = portfolioPlayer.proftPSecond / 100;
     }
-    clickChest(clickValue);
+    portfolioPlayer.clickChest(clickValue);
+    
   });
 }
 
-
+handleGoldChest(portfolioPlayer);
 
 
 

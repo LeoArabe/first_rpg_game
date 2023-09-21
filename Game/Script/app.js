@@ -1,24 +1,16 @@
 import Portfolio from "./portfolio.js";
-import StoreNup from "./storeNup.js"
-import { handleGoldChest } from './goldChest';
-import { Investment } from './investment';
+import StoreNup from "./storeNup.js";
+import { handleNickname } from "./nickname.js";
 
-const initApp = () => {
-    const portfolioPlayer = new Portfolio();
-    const storeNup = new StoreNup(portfolioPlayer);
+const portfolioPlayer = new Portfolio();
+const storeNup = new StoreNup(portfolioPlayer);
 
-    const updatePortifolio = () => {
-        portfolioPlayer.updateProftPSecond();
-        portfolioPlayer.cash += portfolioPlayer.proftPSecond;
-    }
-
-    setInterval(updatePortifolio, 1000);
+const updatePortfolio = () => {
+  portfolioPlayer.updateProftPSecond();
+  portfolioPlayer.cash += portfolioPlayer.proftPSecond;
 };
 
-export default initApp;
+setInterval(updatePortfolio, 1000);
+handleNickname();
 
-initApp.clickChest = (clickValue) => {
-    console.log('mais um')
-};
-
-handleGoldChest();
+export default portfolioPlayer;

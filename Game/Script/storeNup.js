@@ -36,7 +36,6 @@ assets.forEach(asset => {
   asset.quantityUp = !asset.quantityUp ? 0 : asset.quantityUp;
  
   asset.element.addEventListener('click', () => {
-    console.log(assets)
     if (portfolioPlayer.cash >= asset.invest.price) {
        portfolioPlayer.buyInvest(asset.invest);
        asset.quantityElement.innerText = ++asset.quantityElement.innerText || 1;
