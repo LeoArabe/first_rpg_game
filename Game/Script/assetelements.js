@@ -1,4 +1,4 @@
-import { assetsData  } from "./assetsdata.js"
+import { assetsData  } from "./assetsData.js"
 
 export default function createElements() {
     const elements = {};

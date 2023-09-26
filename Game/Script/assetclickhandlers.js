@@ -1,6 +1,6 @@
 import portfolioPlayer from "./app.js";
-import createElements from "./assetelements.js";
-import { createAssets } from "./assetsdata.js"
+import createElements from "./assetElements.js";
+import { createAssets } from "./assetsData.js"
 
 const clickBuyNewAsset = (asset) => {
   asset.element.addEventListener('click', () => {
